@@ -1,4 +1,5 @@
 FROM jazzdd/alpine-flask:python3
 COPY ./ /
-EXPOSE 80
+ENV PORT=80
+EXPOSE $PORT
 ENTRYPOINT ["python", "run.py"]
